@@ -13,7 +13,7 @@
         </div>
         <div id = 'user-name'>
           <input id = 'userName' v-model = 'info.userName'/>
-          <button>修改</button>
+          <button class = 'bin-modify btn-primary'>修改</button>
         </div>
 
       </div>
@@ -59,6 +59,7 @@
       <p class = user-info-item>
         <label class = 'info-label' for = 'phoneNunber'>手机号码</label>
         <input id = 'phoneNunber' type = 'text' v-model = 'info.phoneNumber'/>
+        <button class = 'bin-modify btn-primary'>修改</button>
       </p>
 
     </div>
@@ -130,7 +131,7 @@
 </script>
 
 <style scoped lang = 'scss'>
-  $theme: #3233cb;
+  $theme: #3333CC;
   $img-width: 150px;
 
   #outline{
@@ -187,15 +188,13 @@
       input {
         display: block;
         margin: 0 auto;
-        width: 70%;
+        width: 40%;
         text-align: center;
-        border: none;
-        outline: none;
       }
     button{
       position: absolute;
       top: 0;
-      right:0;
+      right:10%;
     }
   }
 
@@ -264,7 +263,24 @@
     box-sizing: border-box;
     width: 10%;
     margin: 1em 20%;
+    background-color: $theme;
+    color: #fff;
+    border: none;
+    box-shadow: 0px 0px 5px #0431ce;
   }
+
+  .btn-primary {
+    text-indent: -9999px;
+    overflow: hidden;
+    border: none;
+    width: 4em;
+    cursor: pointer;
+    outline: none;
+    background: url('../../../static/modify.gif') left top no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
 
 
 
